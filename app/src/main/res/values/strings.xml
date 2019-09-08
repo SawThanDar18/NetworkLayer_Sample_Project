@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">PADC9_AdapterBasedViews_STD</string>
+    <string name="birthday_txt">Birthday Party</string>
+    <string name="stat_time_txt">06:00 PM-</string>
+    <string name="end_time_txt">8:00 PM</string>
+    <string name="age_txt">18-25</string>
+    <string name="place_txt">Yangon Yangon BBQ</string>
+    <string name="address_txt">Apartment 021, Building No.4, Upper Pazundaung Township, Yangon</string>
+    <string name="name_txt">John T.Lord</string>
+    <string name="position_txt">Organizer</string>
+    <string name="snackbar_msg">Ok</string>
+
+</resources>

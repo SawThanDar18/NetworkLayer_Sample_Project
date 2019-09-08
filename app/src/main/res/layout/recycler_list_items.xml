@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activities.MainActivity">
+
+        <ImageView
+            android:id="@+id/ivEvent"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/cartoon" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvEventName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_large"
+            android:text="@string/birthday_txt"
+            android:textColor="#000"
+            app:layout_constraintStart_toEndOf="@+id/ivEvent"
+            app:layout_constraintTop_toTopOf="@+id/ivEvent" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvStartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/stat_time_txt"
+            android:textColor="#2196F3"
+            app:layout_constraintStart_toStartOf="@+id/tvEventName"
+            app:layout_constraintTop_toBottomOf="@+id/tvEventName" />
+
+        <ImageView
+            android:id="@+id/ivGender"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/tvEventName"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@mipmap/ic_launcher" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvAgeRange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:text="@string/age_txt"
+            android:textColor="#AC9999"
+            app:layout_constraintEnd_toEndOf="@+id/ivGender"
+            app:layout_constraintStart_toStartOf="@+id/ivGender"
+            app:layout_constraintTop_toBottomOf="@+id/ivGender" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:text="@string/place_txt"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivEvent" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:text="@string/address_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_medium_3"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:background="@drawable/line_shape"
+            app:layout_constraintBottom_toTopOf="@+id/ivOrganizer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+
+        <ImageView
+            android:id="@+id/ivOrganizer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddress"
+            app:srcCompat="@drawable/cartoon" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvOrganizerName"
+            android:layout_width="wrap_content"
+            android:layout_height="17dp"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:text="@string/name_txt"
+            android:textColor="#000"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ivOrganizer"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddress" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvEventOwnerRole"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:text="@string/position_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/ivOrganizer"
+            app:layout_constraintTop_toBottomOf="@+id/tvOrganizerName" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_medium_3"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/line_shape"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivOrganizer" />
+
+        <org.mmtextview.components.MMTextView
+            android:id="@+id/tvEndTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/end_time_txt"
+            android:textColor="#2196F3"
+            app:layout_constraintBottom_toBottomOf="@+id/textView2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/textView2"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="-"
+            app:layout_constraintBottom_toBottomOf="@+id/tvStartTime"
+            app:layout_constraintStart_toEndOf="@+id/tvStartTime"
+            app:layout_constraintTop_toTopOf="@+id/tvStartTime" />
+
+</android.support.constraint.ConstraintLayout>
