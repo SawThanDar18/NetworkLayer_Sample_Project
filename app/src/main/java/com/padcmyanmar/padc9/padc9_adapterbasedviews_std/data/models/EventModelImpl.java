@@ -3,6 +3,7 @@ package com.padcmyanmar.padc9.padc9_adapterbasedviews_std.data.models;
 import android.content.Context;
 
 import com.padcmyanmar.padc9.padc9_adapterbasedviews_std.data.vos.EventVO;
+import com.padcmyanmar.padc9.padc9_adapterbasedviews_std.data.vos.EventsAndUsersVO;
 import com.padcmyanmar.padc9.padc9_adapterbasedviews_std.network.dataagents.EventsDataAgent;
 import com.padcmyanmar.padc9.padc9_adapterbasedviews_std.utils.EventsConstants;
 
@@ -35,6 +36,7 @@ public class EventModelImpl extends BaseModel implements EventModel {
     @Override
     public void getEvents(final GetEventsFromNetworkDelegate delegate) {
         if (eventDatabase.areEventsExistInDB()){
+
             List<EventVO> eventsFromDB = eventDatabase.eventDao().getAllEvents();
             delegate.onSuccess(eventsFromDB);
         }else {
