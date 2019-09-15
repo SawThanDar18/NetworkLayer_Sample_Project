@@ -7,6 +7,7 @@ import com.padcmyanmar.padc9.padc9_adapterbasedviews_std.data.vos.EventsAndUsers
 import com.padcmyanmar.padc9.padc9_adapterbasedviews_std.network.dataagents.EventsDataAgent;
 import com.padcmyanmar.padc9.padc9_adapterbasedviews_std.utils.EventsConstants;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -37,7 +38,13 @@ public class EventModelImpl extends BaseModel implements EventModel {
     public void getEvents(final GetEventsFromNetworkDelegate delegate) {
         if (eventDatabase.areEventsExistInDB()){
 
-            List<EventVO> eventsFromDB = eventDatabase.eventDao().getAllEvents();
+            List<EventsAndUsersVO> eventsAndUsersFromDB = eventDatabase.eventDao().getAllEventsFromDB();
+
+            List<EventVO> eventsFromDB = new ArrayList<>();
+            for (EventsAndUsersVO eventsAndUsersVO : eventsAndUsersFromDB){
+                eventsAndUsersVO.getEventVO().setGoingUser(eventsAndUsersVO.getUserVOS());
+                eventsFromDB.add(eventsAndUsersVO.getEventVO());
+            }
             delegate.onSuccess(eventsFromDB);
         }else {
             mDataAgent.getEvents(EventsConstants.DUMMY_ACCESS_TOKEN, new EventsDataAgent.GetEventsFromNetworkDelegate() {

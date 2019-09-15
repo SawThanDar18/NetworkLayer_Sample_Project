@@ -33,6 +33,6 @@ public abstract class EventDatabase extends RoomDatabase {
     }
 
     public boolean areEventsExistInDB(){
-        return !eventDao().getAllEvents().isEmpty();
+        return !eventDao().getAllEventsFromDB().isEmpty();
     }
 }
